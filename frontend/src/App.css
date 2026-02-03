@@ -1,0 +1,73 @@
+:root {
+  --primary: #f84464;
+  --primary-dark: #e03352;
+  --primary-light: #ff6b81;
+  --accent: #ffb64d;
+  
+  --bg-page: #f5f5f5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f3f6;
+  --text-primary: #1f1f1f;
+  --text-secondary: #5f6368;
+  --text-muted: #9e9e9e;
+  --border: #e0e0e0;
+  --border-light: #eceff1;
+  
+  --surface: #ffffff;
+  --surface-elevated: #f8f9fb;
+  
+  --success: #27ae60;
+  --warning: #ffa726;
+  --error: #e53935;
+  --info: #54b9e6;
+  
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.form-hint {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}

@@ -1,0 +1,444 @@
+.event-details {
+  min-height: 100vh;
+  background: var(--bg-page);
+  padding: var(--space-xl);
+}
+
+.event-details .loading {
+  text-align: center;
+  padding: var(--space-2xl);
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.back-btn {
+  padding: var(--space-md) var(--space-lg);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-bottom: var(--space-xl);
+  font-size: 0.95rem;
+  color: #555555;
+  transition: all var(--transition-fast);
+}
+
+.back-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.hero-section {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.hero-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-poster-wrap {
+  width: 250px;
+  height: 375px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero-poster-wrap .poster-image-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.hero-poster {
+  width: 250px;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-info {
+  flex: 1;
+}
+
+.hero-info h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-md) 0;
+  color: #222222;
+  letter-spacing: -0.02em;
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.meta span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.rating {
+  font-weight: 600;
+  color: #f5c518;
+}
+
+.description {
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.cast, .crew {
+  margin-top: var(--space-md);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.shows-section {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.shows-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--text-primary);
+}
+
+.no-shows {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--text-muted);
+}
+
+.venue-group {
+  margin-bottom: var(--space-xl);
+}
+
+.venue-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.show-times {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.show-btn {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-card);
+  border: 2px solid var(--success);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  min-width: 150px;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.show-btn:hover:not(:disabled) {
+  background: var(--success);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.show-btn.fast_filling {
+  border-color: #f39c12;
+}
+
+.show-btn.fast_filling:hover {
+  background: #f39c12;
+}
+
+.show-btn.housefull {
+  border-color: #e74c3c;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.show-btn:disabled {
+  cursor: not-allowed;
+}
+
+.show-time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.show-price {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.show-seats {
+  font-size: 0.8rem;
+  color: var(--success);
+}
+
+.date-picker {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.date-btn {
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  min-width: 80px;
+  transition: all var(--transition-fast);
+}
+
+.date-btn:hover {
+  border-color: var(--primary);
+}
+
+.date-btn.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.date-day {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.date-label {
+  font-size: 0.8rem;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.trailer-section {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.trailer-section h2 {
+  margin: 0 0 var(--space-md) 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.reviews-section {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.reviews-section h2 {
+  margin: 0 0 var(--space-md) 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.review-card {
+  padding: var(--space-lg);
+  background: var(--bg-page);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.review-rating {
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: #f5c518;
+}
+
+.review-comment {
+  margin: 0 0 var(--space-sm) 0;
+  color: var(--text-primary);
+}
+
+.review-user {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.load-more-reviews {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background var(--transition-fast);
+}
+
+.load-more-reviews:hover {
+  background: var(--primary-light);
+}
+
+.no-reviews-text {
+  margin-bottom: var(--space-lg);
+  color: var(--text-secondary);
+}
+
+.review-form {
+  margin-top: var(--space-lg);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.review-form-row label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.review-form-row select,
+.review-form-row textarea {
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.submit-review-btn {
+  align-self: flex-start;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background var(--transition-fast);
+}
+
+.submit-review-btn:hover:not(:disabled) {
+  background: var(--primary-light);
+}
+
+.submit-review-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.trailer-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.trailer-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.show-btn.available {
+  border-color: #27ae60;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-poster {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Show Status Colors */
+.show-btn.available {
+  border: 2px solid #27ae60;
+  background-color: rgba(39, 174, 96, 0.05);
+}
+
+.show-btn.available:hover:not(:disabled) {
+  background-color: rgba(39, 174, 96, 0.1);
+  border-color: #229954;
+}
+
+.show-btn.fast_filling {
+  border: 2px solid #f39c12;
+  background-color: rgba(243, 156, 18, 0.05);
+}
+
+.show-btn.fast_filling:hover:not(:disabled) {
+  background-color: rgba(243, 156, 18, 0.1);
+  border-color: #e67e22;
+}
+
+.show-btn.almost_full {
+  border: 2px solid #e74c3c;
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+.show-btn.almost_full:hover:not(:disabled) {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-color: #c0392b;
+}
+
+.show-btn.housefull,
+.show-btn:disabled {
+  border: 2px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.show-seats {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}

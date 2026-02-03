@@ -1,0 +1,9 @@
+node_modules/
+target/
+*.jar
+*.class
+.vscode/
+.DS_Store
+build/
+dist/
+.env
