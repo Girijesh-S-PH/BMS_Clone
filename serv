@@ -1,0 +1,48 @@
+package com.peoplehum.competencyManagement.v1.service;
+
+import com.peoplehum.competencyManagement.common.model.SearchFilter;
+import com.peoplehum.competencyManagement.v1.entity.Competency;
+import com.peoplehum.competencyManagement.v1.enums.CompetencyStatus;
+import com.peoplehum.competencyManagement.v1.repository.CompetencyRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+import java.util.Set;
+
+
+public interface CompetencyService {
+
+  List<Competency> findByCustomerIdAndCompetencyGroupId(Long customerId, Long competencyGroupId);
+
+  Competency save(Competency competency);
+
+  Competency findByCustomerIdAndId(Long customerId, Long id);
+
+  List<Competency> findByCustomerIdAndCompetencyNameIgnoreCase(Long customerId, String name);
+
+    List<Competency> findByCustomerIdAndStatusNotAndCompetencyNameIgnoreCase(Long customerId,
+            CompetencyStatus status, String competencyName);
+
+  List<Competency> findByCustomerIdAndIdIn(Long customerId, List<Long> id);
+
+  List<Competency> findByCustomerIdAndStatusNotAndCompetencyGroupIdAndCompetencyNameIgnoreCase(Long customerId,
+      CompetencyStatus status, Long competencyGroupId, String competencyName);
+
+  List<Competency> findAllByCustomerId(Long customerId);
+
+  Page<Competency> findAllByCustomerIdAndStatusAndCompetencyNameContainingIgnoreCase(Long customerId,
+      CompetencyStatus status, String competencyName, Pageable pageable);
+
+  Page<Competency> findAllByCustomerId(Long customerId, SearchFilter searchFilter,
+      Pageable pageable);
+
+  void inactivateCompetency(Long customerId, Long competencyId);
+
+  List<Competency> findAllByCustomerIdAndStatus(Long customerId, CompetencyStatus status);
+
+  Set<CompetencyRepository.StatusAndCountModelInterface> countByCustomerId(Long customerId);
+
+  Page<Competency> findAllApplicableCompetencies(Long customerId, Long jobFunctionId,
+      Long payGradeId, String queryValue, Boolean hasQueryValue, Pageable pageable);
+}
